@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
+import Header from './Header';
 import ColorBox from './ColorBox';
-import Slider from 'rc-slider';
-import 'rc-slider/assets/index.css';
 import { PaletteStyled } from './PaletteStyled';
 
 const Palette = props => {
@@ -17,15 +16,7 @@ const Palette = props => {
 
   return (
     <PaletteStyled>
-      <div className="slider">
-        <Slider
-          defaultValue={level}
-          min={100}
-          max={900}
-          step={100}
-          onAfterChange={changeLevel}
-        />
-      </div>
+      <Header level={level} changeLevel={changeLevel} />
       <div className="palette-colors">{colorBoxes}</div>
     </PaletteStyled>
   );
