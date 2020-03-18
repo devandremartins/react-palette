@@ -32,4 +32,38 @@ export const ColorBoxStyled = styled.article`
     text-align: center;
     height: 30px;
   }
+  .copy-overlay {
+    opacity: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    &.show {
+      opacity: 1;
+      transform: scale(50);
+      z-index: 10;
+      position: absolute;
+    }
+  }
+  .copy-msg {
+    position: fixed;
+    top: 0%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    opacity: 0;
+    color: #fff;
+    transform: scale(0.1);
+    &.show {
+      opacity: 1;
+      transform: scale(1);
+      z-index: 25;
+      transition: all 0.5s ease-in-out;
+      transition-delay: 0.1s;
+    }
+  }
 `;
