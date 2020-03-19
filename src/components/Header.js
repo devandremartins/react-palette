@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import Dropdown from 'react-dropdown';
@@ -13,7 +14,9 @@ const Header = ({ level, changeLevel, changeFormat }) => {
   ];
   return (
     <HeaderStyled>
-      <div className="logo">React Palette</div>
+      <div className="logo">
+        <Link to="/">React Palette</Link>
+      </div>
       <span>Level: {level}</span>
       <div className="slider">
         <Slider

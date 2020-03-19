@@ -1,14 +1,17 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import PaletteList from './components/PaletteList';
 import Palette from './components/Palette';
 
-const App = props => {
+const App = () => {
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/" />
+        <Route exact path="/">
+          <PaletteList />
+        </Route>
         <Route exact path="/palette/:slug">
-          {<Palette />}
+          <Palette />
         </Route>
       </Switch>
     </div>
