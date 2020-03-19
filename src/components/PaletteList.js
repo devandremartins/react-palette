@@ -9,9 +9,11 @@ const PaletteList = () => {
 
   return (
     <PaletteListStyled>
-      {palettes.map(palette => (
-        <MiniPalette {...palette} />
-      ))}
+      <div className="palettes">
+        {palettes.map(palette => (
+          <MiniPalette {...palette} />
+        ))}
+      </div>
     </PaletteListStyled>
   );
 };
