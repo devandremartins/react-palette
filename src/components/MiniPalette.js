@@ -1,7 +1,7 @@
 import React from 'react';
 import { MiniPaletteStyled } from './MiniPaletteStyled';
 
-const MiniPalette = ({ paletteName, emoji, colors }) => {
+const MiniPalette = ({ paletteName, emoji, colors, handleClick }) => {
   const miniColorBoxes = colors.map(color => (
     <div
       key={color.name}
@@ -10,7 +10,7 @@ const MiniPalette = ({ paletteName, emoji, colors }) => {
     ></div>
   ));
   return (
-    <MiniPaletteStyled>
+    <MiniPaletteStyled onClick={handleClick}>
       <div className="colors">{miniColorBoxes}</div>
       <h5 className="title">
         {paletteName} - <span className="emoji">{emoji}</span>
