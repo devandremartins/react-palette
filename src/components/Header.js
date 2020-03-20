@@ -17,8 +17,10 @@ const Header = ({ level, changeLevel, changeFormat }) => {
       <div className="logo">
         <Link to="/">React Palette</Link>
       </div>
-      <span>Level: {level}</span>
       <div className="slider">
+        <div className="level">
+          <span>Level:</span> {level}
+        </div>
         <Slider
           defaultValue={level}
           min={100}
@@ -27,7 +29,9 @@ const Header = ({ level, changeLevel, changeFormat }) => {
           onAfterChange={changeLevel}
         />
       </div>
-      <Dropdown options={formatOptions} onChange={changeFormat} />
+      <div className="format">
+        <Dropdown options={formatOptions} onChange={changeFormat} />
+      </div>
     </HeaderStyled>
   );
 };

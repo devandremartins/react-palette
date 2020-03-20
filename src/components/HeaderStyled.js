@@ -5,9 +5,10 @@ export const HeaderStyled = styled.header`
   display: flex;
   height: 6vh;
   align-items: center;
-  justify-content: flex-start;
+
   .logo {
-    padding: 0 15px;
+    line-height: 6vh;
+    padding: 0 20px 0 15px;
     background: #f9f9f9;
     font-size: 1.6rem;
     font-weight: 500;
@@ -18,8 +19,23 @@ export const HeaderStyled = styled.header`
     }
   }
   .slider {
-    width: 340px;
-    margin: 0 10px;
+    padding: 0 10px;
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .level {
+    display: inline-block;
+    font-size: 1.4rem;
+    padding: 0 15px;
+    span {
+      font-weight: 500;
+    }
+  }
+
+  .rc-slider {
+    max-width: 340px;
     display: inline-block;
   }
   .rc-slider-track {
@@ -40,5 +56,8 @@ export const HeaderStyled = styled.header`
     height: 13px;
     margin-left: -7px;
     margin-top: -3px;
+  }
+  .format {
+    padding: 0 15px;
   }
 `;
