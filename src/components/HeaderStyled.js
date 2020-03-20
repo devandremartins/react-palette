@@ -7,8 +7,15 @@ export const HeaderStyled = styled.header`
   align-items: center;
   justify-content: flex-start;
   .logo {
-    padding: 0 13px;
+    padding: 0 15px;
     background: #f9f9f9;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    a {
+      color: #000;
+    }
   }
   .slider {
     width: 340px;

@@ -15,8 +15,9 @@ const PaletteList = props => {
   return (
     <PaletteListStyled>
       <div className="palettes">
-        {palettes.map(palette => (
+        {palettes.map((palette, index) => (
           <MiniPalette
+            key={index}
             {...palette}
             handleClick={() => goToPalette(palette.id)}
           />
