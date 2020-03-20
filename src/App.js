@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import PaletteList from './components/PaletteList';
 import Palette from './components/Palette';
+import SingleColorPalette from './components/SingleColorPalette';
 
 const App = () => {
   return (
@@ -12,6 +13,9 @@ const App = () => {
         </Route>
         <Route exact path="/palette/:slug">
           <Palette />
+        </Route>
+        <Route exact path="/palette/:paletteId/:colorId">
+          <SingleColorPalette />
         </Route>
       </Switch>
     </div>

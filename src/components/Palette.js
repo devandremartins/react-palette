@@ -4,7 +4,6 @@ import ColorBox from './ColorBox';
 import seedColors from '../seeds/seedColors';
 import { generatePalette } from '../colorHelpers';
 import { useParams } from 'react-router-dom';
-
 import { PaletteStyled } from './PaletteStyled';
 
 const Palette = props => {
@@ -21,7 +20,13 @@ const Palette = props => {
   const palette = generatePalette(findPalette(slug));
 
   const colorBoxes = palette.colors[level].map(color => (
-    <ColorBox key={color.id} background={color[format]} name={color.name} />
+    <ColorBox
+      key={color.id}
+      background={color[format]}
+      name={color.name}
+      id={color.id}
+      paletteId={palette.id}
+    />
   ));
 
   const changeLevel = newLevel => {
