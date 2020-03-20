@@ -9,7 +9,7 @@ export const HeaderStyled = styled.header`
   .logo {
     line-height: 6vh;
     padding: 0 20px 0 15px;
-    background: #f9f9f9;
+    background: #f5f5f5;
     font-size: 1.6rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -59,5 +59,23 @@ export const HeaderStyled = styled.header`
   }
   .format {
     padding: 0 15px;
+  }
+  .Dropdown-root {
+    font-size: 1.4rem;
+    color: #000;
+    width: 190px;
+  }
+  .Dropdown-control {
+    border: 0;
+    border-bottom: 1px solid #e9e9e9;
+  }
+  .Dropdown-menu {
+    border-color: #e9e9e9;
+  }
+  .Dropdown-arrow {
+    border-color: #000 transparent transparent;
+  }
+  .is-open .Dropdown-arrow {
+    border-color: transparent transparent #000;
   }
 `;
