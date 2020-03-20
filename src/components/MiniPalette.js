@@ -12,9 +12,9 @@ const MiniPalette = ({ paletteName, emoji, colors, handleClick }) => {
   return (
     <MiniPaletteStyled onClick={handleClick}>
       <div className="colors">{miniColorBoxes}</div>
-      <h5 className="title">
-        {paletteName} - <span className="emoji">{emoji}</span>
-      </h5>
+      <h2 className="title">
+        {paletteName} <span className="emoji">{emoji}</span>
+      </h2>
     </MiniPaletteStyled>
   );
 };

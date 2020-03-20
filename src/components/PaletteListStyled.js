@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const PaletteListStyled = styled.div`
-  height: 100%;
   align-items: flex-start;
   justify-content: center;
   .palettes {

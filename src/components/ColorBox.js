@@ -27,12 +27,12 @@ const ColorBox = ({ background, name, id, paletteId }) => {
         </div>
         <div className="color-name">{name}</div>
         <button className="copy-btn">copy</button>
-        <Link
+        {/* <Link
           to={`/palette/${paletteId}/${id}`}
           onClick={e => e.stopPropagation()}
         >
           <div className="see-more">more</div>
-        </Link>
+        </Link> */}
       </ColorBoxStyled>
     </CopyToClipboard>
   );

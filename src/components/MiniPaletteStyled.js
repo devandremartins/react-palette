@@ -1,22 +1,18 @@
 import styled from 'styled-components';
 
-export const MiniPaletteStyled = styled.div`
-  background: white;
-  padding: 0.5rem;
+export const MiniPaletteStyled = styled.article`
+  background: #fff;
+  padding: 1rem;
   overflow: hidden;
   cursor: pointer;
-  border: 1px solid black;
+  border-radius: 3px;
   .colors {
     height: 150px;
     width: 100%;
   }
   .title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin: 0;
-    padding-top: 0.5rem;
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
   .emoji {
     margin-left: 0.5rem;
