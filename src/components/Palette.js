@@ -5,6 +5,7 @@ import seedColors from '../seeds/seedColors';
 import { generatePalette } from '../colorHelpers';
 import { useParams } from 'react-router-dom';
 import { PaletteStyled } from './PaletteStyled';
+import Footer from './Footer';
 
 const Palette = props => {
   const [level, setLevel] = useState(500);
@@ -45,9 +46,7 @@ const Palette = props => {
         changeFormat={changeFormat}
       />
       <div className="palette-colors">{colorBoxes}</div>
-      <footer className="palette-footer">
-        {palette.paletteName} - {palette.emoji}
-      </footer>
+      <Footer paletteName={palette.paletteName} emoji={palette.emoji} />
     </PaletteStyled>
   );
 };
