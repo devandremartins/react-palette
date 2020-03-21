@@ -7,7 +7,7 @@ const ColorBox = ({ background, name, id, paletteId }) => {
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setCopied(false), 2500);
+    setTimeout(() => setCopied(false), 2000);
   }, [copied]);
 
   const changeCopyState = () => {
@@ -17,6 +17,8 @@ const ColorBox = ({ background, name, id, paletteId }) => {
   return (
     <CopyToClipboard text={background} onCopy={changeCopyState}>
       <ColorBoxStyled style={{ background }}>
+        <div className="color-name">{name}</div>
+        <button className="copy-btn">copy</button>
         <div
           style={{ background }}
           className={`copy-overlay ${copied && 'show'}`}
@@ -25,8 +27,6 @@ const ColorBox = ({ background, name, id, paletteId }) => {
           <h1>Copied!</h1>
           <p>{background}</p>
         </div>
-        <div className="color-name">{name}</div>
-        <button className="copy-btn">copy</button>
         {/* <Link
           to={`/palette/${paletteId}/${id}`}
           onClick={e => e.stopPropagation()}

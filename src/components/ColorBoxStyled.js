@@ -9,9 +9,20 @@ export const ColorBoxStyled = styled.article`
     opacity: 1;
   }
   .copy-btn {
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.3);
+    padding: 0.5rem 1rem;
+    color: #fff;
     border: 0;
     opacity: 0;
     transition: 0.3s;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    font-weight: 500;
   }
   .color-name {
     position: absolute;
