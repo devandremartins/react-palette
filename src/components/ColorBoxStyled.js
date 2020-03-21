@@ -47,14 +47,15 @@ export const ColorBoxStyled = styled.article`
   }
   .copy-msg {
     position: fixed;
-    top: 0%;
+    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 4rem;
+    flex-direction: column;
+    font-size: 4.5rem;
     opacity: 0;
     color: #fff;
     transform: scale(0.1);
@@ -64,6 +65,9 @@ export const ColorBoxStyled = styled.article`
       z-index: 25;
       transition: all 0.5s ease-in-out;
       transition-delay: 0.1s;
+    }
+    h1 {
+      margin-bottom: 1.5rem;
     }
   }
 `;
