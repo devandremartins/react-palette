@@ -1,10 +1,11 @@
 import React from 'react';
+import { FooterStyled } from './FooterStyled';
 
 const Footer = ({ paletteName, emoji }) => {
   return (
-    <footer className="palette-footer">
+    <FooterStyled>
       {paletteName} - {emoji}
-    </footer>
+    </FooterStyled>
   );
 };
 
