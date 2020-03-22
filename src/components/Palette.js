@@ -27,6 +27,7 @@ const Palette = props => {
       name={color.name}
       id={color.id}
       paletteId={palette.id}
+      showLink
     />
   ));
 

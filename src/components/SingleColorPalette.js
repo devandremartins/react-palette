@@ -3,6 +3,8 @@ import seedColors from '../seeds/seedColors';
 import { generatePalette } from '../colorHelpers';
 import { useParams } from 'react-router-dom';
 import ColorBox from './ColorBox';
+import Header from './Header';
+import Footer from './Footer';
 
 const SingleColorPalette = () => {
   const findPalette = slug => {
@@ -19,17 +21,30 @@ const SingleColorPalette = () => {
     for (let key in palette.colors) {
       shades = [
         ...shades,
-        palette.colors[key].filter(color => color.id === colorId)
+        ...palette.colors[key].filter(color => color.id === colorId)
       ];
     }
+    console.log(shades);
+
     return shades.slice(1);
   };
 
   const colorBoxes = getShades().map(color => (
-    <ColorBox key={color.id} name={color.name} color={color.hex} />
+    <ColorBox
+      key={color.name.replace(/\s/g, '')}
+      name={color.name}
+      background={color.hex}
+      showLink={false}
+    />
   ));
 
-  return <div>{colorBoxes}</div>;
+  return (
+    <div>
+      <Header />
+      <div className="Palette-colors">{colorBoxes}</div>
+      <Footer paletteName={palette.paletteName} emoji={palette.emoji} />
+    </div>
+  );
 };
 
 export default SingleColorPalette;
