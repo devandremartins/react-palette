@@ -3,11 +3,11 @@ import styled from 'styled-components';
 export const HeaderStyled = styled.header`
   background: #fff;
   display: flex;
-  height: 6vh;
+  min-height: 55px;
   align-items: center;
 
   .logo {
-    line-height: 6vh;
+    line-height: 55px;
     padding: 0 20px 0 15px;
     background: #f5f5f5;
     font-size: 1.6rem;

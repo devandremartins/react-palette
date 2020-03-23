@@ -6,7 +6,13 @@ import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import { HeaderStyled } from './HeaderStyled';
 
-const Header = ({ level, changeLevel, changeFormat }) => {
+const Header = ({
+  level,
+  changeLevel,
+  changeFormat,
+  showLevelSlider,
+  showFormatDropdown
+}) => {
   const formatOptions = [
     { value: 'hex', label: 'HEX - #ffffff' },
     { value: 'rgb', label: 'RGB - (255, 255, 255)' },
@@ -17,24 +23,31 @@ const Header = ({ level, changeLevel, changeFormat }) => {
       <div className="logo">
         <Link to="/">React Palette</Link>
       </div>
+
       <div className="slider">
-        <div className="level">
-          <span>Level:</span> {level}
-        </div>
-        <Slider
-          defaultValue={level}
-          min={100}
-          max={900}
-          step={100}
-          onAfterChange={changeLevel}
-        />
+        {showLevelSlider && (
+          <>
+            <div className="level">
+              <span>Level:</span> {level}
+            </div>
+            <Slider
+              defaultValue={level}
+              min={100}
+              max={900}
+              step={100}
+              onAfterChange={changeLevel}
+            />
+          </>
+        )}
       </div>
       <div className="format">
-        <Dropdown
-          value={formatOptions[0]}
-          options={formatOptions}
-          onChange={changeFormat}
-        />
+        {showFormatDropdown && (
+          <Dropdown
+            value={formatOptions[0]}
+            options={formatOptions}
+            onChange={changeFormat}
+          />
+        )}
       </div>
     </HeaderStyled>
   );

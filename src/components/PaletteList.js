@@ -3,6 +3,7 @@ import seedColors from '../seeds/seedColors';
 import { PaletteListStyled } from './PaletteListStyled';
 import MiniPalette from './MiniPalette';
 import { useHistory } from 'react-router-dom';
+import Header from './Header';
 
 const PaletteList = props => {
   const palettes = seedColors;
@@ -14,6 +15,7 @@ const PaletteList = props => {
 
   return (
     <PaletteListStyled>
+      <Header />
       <div className="palettes">
         {palettes.map((palette, index) => (
           <MiniPalette

@@ -45,6 +45,8 @@ const Palette = props => {
         level={level}
         changeLevel={changeLevel}
         changeFormat={changeFormat}
+        showLevelSlider={true}
+        showFormatDropdown={true}
       />
       <div className="palette-colors">{colorBoxes}</div>
       <Footer paletteName={palette.paletteName} emoji={palette.emoji} />

@@ -42,6 +42,7 @@ export const ColorBoxStyled = styled.article`
     width: 60px;
     text-align: center;
     height: 30px;
+    color: #000;
   }
   .copy-overlay {
     opacity: 0;

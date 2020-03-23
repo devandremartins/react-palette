@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import seedColors from '../seeds/seedColors';
 import { generatePalette } from '../colorHelpers';
 import { useParams } from 'react-router-dom';
 import ColorBox from './ColorBox';
 import Header from './Header';
 import Footer from './Footer';
+import { SingleColorPaletteStyled } from './SingleColorPaletteStyled';
 
 const SingleColorPalette = () => {
+  const [format, setFormat] = useState('hex');
+
   const findPalette = slug => {
     return seedColors.find(palette => {
       return palette.id === slug;
@@ -38,12 +42,21 @@ const SingleColorPalette = () => {
     />
   ));
 
+  const changeFormat = e => {
+    setFormat(e.value);
+  };
+
   return (
-    <div>
-      <Header />
-      <div className="Palette-colors">{colorBoxes}</div>
+    <SingleColorPaletteStyled>
+      <Header changeFormat={changeFormat} showFormatDropdown={true} />
+      <div className="color-shades">
+        {colorBoxes}
+        <article>
+          <Link to={`/palette/${palette.id}`}>Go Back</Link>
+        </article>
+      </div>
       <Footer paletteName={palette.paletteName} emoji={palette.emoji} />
-    </div>
+    </SingleColorPaletteStyled>
   );
 };
 

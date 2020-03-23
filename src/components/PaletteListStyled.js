@@ -6,6 +6,6 @@ export const PaletteListStyled = styled.div`
     grid-template-columns: repeat(3, 1fr);
     gap: 5%;
     max-width: 100rem;
-    margin: 0 auto;
+    margin: 3rem auto;
   }
 `;
