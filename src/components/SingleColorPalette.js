@@ -51,8 +51,10 @@ const SingleColorPalette = () => {
       <Header changeFormat={changeFormat} showFormatDropdown={true} />
       <div className="color-shades">
         {colorBoxes}
-        <article>
-          <Link to={`/palette/${palette.id}`}>Go Back</Link>
+        <article className="goback-box">
+          <Link to={`/palette/${palette.id}`} className="goback-btn">
+            Go Back
+          </Link>
         </article>
       </div>
       <Footer paletteName={palette.paletteName} emoji={palette.emoji} />

@@ -3,9 +3,8 @@ import styled from 'styled-components';
 export const HeaderStyled = styled.header`
   background: #fff;
   display: flex;
-  min-height: 55px;
+  height: 6vh;
   align-items: center;
-
   .logo {
     line-height: 55px;
     padding: 0 20px 0 15px;
