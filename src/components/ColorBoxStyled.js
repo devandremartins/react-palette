@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const ColorBoxStyled = styled.article`
   position: relative;
+  min-height: 6rem;
   cursor: pointer;
   padding: 15px;
   text-transform: uppercase;
