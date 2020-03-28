@@ -6,6 +6,7 @@ export const MiniPaletteStyled = styled.article`
   overflow: hidden;
   cursor: pointer;
   border-radius: 3px;
+  margin: 0 0 3rem;
   .colors {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -18,6 +19,7 @@ export const MiniPaletteStyled = styled.article`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-weight: 500;
   }
   .emoji {
     line-height: 1;
