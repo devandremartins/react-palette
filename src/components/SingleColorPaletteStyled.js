@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const SingleColorPaletteStyled = styled.div`
   .color-shades {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     min-height: 90vh;
   }
   .goback-box {
@@ -12,6 +12,7 @@ export const SingleColorPaletteStyled = styled.div`
     cursor: pointer;
     padding: 15px;
     text-transform: uppercase;
+    min-height: 6rem;
   }
   .goback-btn {
     text-transform: uppercase;
